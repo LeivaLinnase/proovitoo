@@ -1,0 +1,86 @@
+
+<div class="tabel">
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">Nimetus</th>
+        <th scope="col">Kogus</th>
+        <th scope="col">Rendilevõtu hind</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rentProduct of rentProducts">
+        <td><img src="{{rentProduct.product.imgSrc}}" alt=""></td>
+        <td scope="row"><b>{{rentProduct.product.id}}</b>
+        <td>{{rentProduct.product.name}}</td>
+        <td><img class="nupp" src="assets/plus.png" alt="" (click)="onIncreaseQuantity(rentProduct)"><br>
+            {{rentProduct.quantity}} <br>
+        
+        <img class="nupp" src="assets/remove.png" alt="" (click)="onDecreaseQuantity(rentProduct)"><br>
+        <img class="dustbin" src="assets/bin.png" alt="" (click)="onRemoveProduct(rentProduct)"></td>
+        <td><div *ngIf="rentProduct.product.price < 1500; else elseBlock"><div class="punane">
+            Esimese 24h hind: {{ ((rentProduct.product.price)* 0.1).toFixed(2) }}€
+        </div>
+        
+         <div class="helepunane">
+            Iga järgnev 24h: {{ ((rentProduct.product.price)* 0.02).toFixed(2) }}€
+         </div></div>
+         <ng-template  #elseBlock> 
+             <div class="punane">
+            Esimese 24h hind: {{ ((rentProduct.product.price)* 0.05).toFixed(2) }}€
+         </div>
+         
+            <div class="helepunane">
+                Iga järgnev 24h: {{ ((rentProduct.product.price)* 0.01).toFixed(2) }}€
+            </div></ng-template>
+         
+        </td>
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+  </table>
+
+</div><br><br>
+
+<div class="kui" *ngIf="rentProducts.length === 0">
+    Sa ei ole veel tooteid lisanud.
+</div>
+<div class="to-pay" *ngIf="rentProducts.length !== 0">
+    <br>
+    Esialgne rendimakse kokku: <div class="kokku">
+        {{ totalPrice.toFixed(2) }}€
+    </div> 
+    <br>
+    <button class="btn btn-secondary" >MAKSA</button>
+    <button class="btn btn-danger" (click)="emptyCart()" >TYHJENDA</button>
+
+
+</div>
+
+
+
+<!-- <div class="cart-item" *ngFor="let rentProduct of rentProducts">
+    <img class="cart-item-pic" src="{{ rentProduct.product.imgSrc }}" alt="">
+    <div class="cart-item-name">{{ rentProduct.product.name }}</div>
+    
+    <div *ngIf="rentProduct.product.price < 1500; else elseBlock">Esimese 24h hind: {{ ((rentProduct.product.price)* 0.1).toFixed(2) }} $</div>
+    <ng-template #elseBlock>Esimese 24h hind: {{ ((rentProduct.product.price)* 0.05).toFixed(2) }} $.</ng-template>
+
+    <div class="cart-item-quantity">Kogus: {{ rentProduct.quantity.toFixed(2) }} tk</div> -->
+   
+   
+   
+   
+   
+    <!-- <div> -->
+    <!-- <div class="cart-item-total">Kokku: {{ (rentProduct.product.price * rentProduct.quantity) }} $</div> -->
+    <!-- <img *ngIf="rentProduct.product.id !== 11110000" class="cart-button" src="assets/cart/minus.png" alt="-" (click)="onDecreaseQuantity(rentProduct)"> 
+    <img *ngIf="rentProduct.product.id !== 11110000" class="cart-button" src="assets/cart/plus.png" alt="+" (click)="onIncreaseQuantity(rentProduct)"> 
+    <img class="cart-button" src="assets/cart/x-button.png" alt="X" (click)="onRemoveProduct(rentProduct)">
+   </div> -->
+    
+<!-- </div> -->

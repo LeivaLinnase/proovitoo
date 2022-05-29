@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row" *ngFor="let item of trellikomplektid">
+      <div class="col"><img src="{{item.imgSrc}}" alt=""></div>
+      <div class="col"><b>{{item.name}}</b></div>
+      <div class="col"><i>{{item.description}}</i></div>
+      <div class="col"><i class="punane">Rendi esimene 24h: </i> <b>{{(item.price * 0.1).toFixed(2)}}€</b><br>
+        <br>
+        <i class="punane">Iga järgnev 24h: </i> <b>{{(item.price * 0.02).toFixed(2)}}€</b></div>
+        <button class="btn btn-secondary" (click)="onAddToCart(item)">Broneerimiseks vajuta siia</button>
+        
+      <div class="w-50"></div>
+    
+      
+      
+    </div>
+  </div>

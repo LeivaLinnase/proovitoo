@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand">EhitusTööriist</span>
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+            Tööriistad
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a ngbDropdownItem href="/saed">Saed</a>
+            <a ngbDropdownItem href="/trellikomplektid">Trellikomplektid</a>
+            <a ngbDropdownItem href="/naelapussid">Naelapüssid</a>
+            <a ngbDropdownItem href="/laserid">Laserid</a>
+            <a ngbDropdownItem href="/kompressorid">Kompressorid</a>
+            <a ngbDropdownItem href="/akumutrikeerajad">Akumutrikeerajad</a>
+            <a ngbDropdownItem href="/tellingud">Tellingud</a>
+            <!-- <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a> -->
+          </div>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/rasketehnika">Rasketehnika</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/rendikorv">Rendikorv</a>
+        </li>
+
+
+        <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+            Kontakt
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Meist</a>
+            <a ngbDropdownItem href="asukohad">Asukohad</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EhitusTööriist</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Turvavarustus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rasketehnika">Rasketehnika</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="saed" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              Tööriistad
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="">Trellikomplektid</a></li>
+              <li><a class="dropdown-item" href="">Akumutrikeerajad</a></li>
+              <li><a class="dropdown-item" href="saed">Saed</a></li>
+              <li><a class="dropdown-item" href="">Naelapüssid</a></li>
+              <li><a class="dropdown-item" href="">Laserid</a></li>
+              <li><a class="dropdown-item" href="">Tellingud</a></li>
+            </ul>
+          </li>
+         </ul>
+      </div>
+     </div>
+  </nav> -->
+
+
+
+ 

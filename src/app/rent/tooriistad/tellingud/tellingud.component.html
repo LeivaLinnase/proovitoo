@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row" *ngFor="let product of tellingud">
+      <div class="col"><img src="{{product.imgSrc}}" alt=""></div>
+      <div class="col"><b>{{product.name}}</b></div>
+      <div class="col"><i>{{product.description}}</i></div>
+      <div class="col"><i class="punane">Rendi esimene 24h: </i> <b>{{(product.price * 0.05).toFixed(2)}}€</b><br>
+        <br>
+        <i class="punane">Iga järgnev 24h: </i> <b>{{(product.price * 0.01).toFixed(2)}}€</b></div>
+        <button class="btn btn-secondary" (click)="onAddToCart(product)">Broneerimiseks vajuta siia</button>
+        
+      <div class="w-50"></div>
+    
+      
+      
+    </div>
+  </div>
+  

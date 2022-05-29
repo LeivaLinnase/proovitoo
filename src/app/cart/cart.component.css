@@ -1,0 +1,42 @@
+thead {
+
+    background-color: rgb(50, 48, 59);
+    color: white;
+}
+
+img {
+    height: 60%;
+    width: 60%;
+}
+
+.tabel {
+    justify-content: center;
+    margin: 3%;
+}
+.punane {
+    color: #8b0000;
+    
+    font-weight: 600
+}
+.helepunane {
+    color: #8b0000;
+    font-style: italic;
+}
+.to-pay {
+    text-align: center;
+}
+.kokku {
+    font-weight: bolder;
+}
+.nupp {
+    width: 12px;
+    height: 12px;
+}
+.dustbin {
+    height: 14px;
+    width: 12px;
+    
+}
+.kui {
+    text-align: center;
+}

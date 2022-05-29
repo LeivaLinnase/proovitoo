@@ -1,0 +1,40 @@
+
+<!-- <div class="d-flex flex-wrap">
+   <div class="saed" *ngFor="let saag of saed">
+    <img src="{{saag.imgSrc}}" alt="saePilt">
+    <div>{{saag.name}}</div>
+    <div>{{saag.description}}</div>
+
+    <div>Rendi hind esimene 24h: <br>
+    {{(saag.price * 0.1).toFixed(2)}}€</div>
+    <div>Iga järgnev 24h: <br>
+    {{(saag.price * 0.03).toFixed(2)}}€</div>
+   </div>
+ </div> -->
+
+ <!-- <div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let saag of saed">
+      <img src="{{saag.imgSrc}}" alt="">
+    <div>{{saag.name}}</div>
+    <div>{{saag.description}}</div>
+    <div>{{saag.price}}</div>
+    
+</div> -->
+<div class="container">
+  <div class="row" *ngFor="let product of saed">
+    <div class="col"><img src="{{product.imgSrc}}" alt=""></div>
+    <div class="col"><b>{{product.name}}</b></div>
+    <div class="col"><i>{{product.description}}</i></div>
+    <div class="col"><i class="punane">Rendi esimene 24h: </i> <b>{{(product.price * 0.1).toFixed(2)}}€</b><br>
+      <br>
+      <i class="punane">Iga järgnev 24h: </i> <b>{{(product.price * 0.02).toFixed(2)}}€</b></div>
+      <button class="btn btn-secondary" (click)="onAddToCart(product)">Broneerimiseks vajuta siia</button>
+      
+    <div class="w-50"></div>
+  
+    
+    
+  </div>
+</div>
+
