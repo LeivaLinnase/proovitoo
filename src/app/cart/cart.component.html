@@ -50,17 +50,39 @@
     Sa ei ole veel tooteid lisanud.
 </div>
 <div class="to-pay" *ngIf="rentProducts.length !== 0">
+    
+  Vali alguskuupaev: <input type="date" [(ngModel)]="startDate"><br>
+  Vali lopukuupaev: <input type="date" [(ngModel)]="endDate"><br>
+  <button class="btn btn-sm btn-secondary " (click)="onSubmitDate()">Vali need kuupaevad</button><br><br>
+  
+  <div *ngIf="rentDays === 0; else elseBlock">Rendipäevade arv: 1</div>
+  <ng-template #elseBlock>Rendipäevade arv: {{rentDays}}</ng-template>    
+  
+  
+    
+    
+   
+    
+    
+
     <br>
     Esialgne rendimakse kokku: <div class="kokku">
         {{ totalPrice.toFixed(2) }}€
     </div> 
     <br>
-    <button class="btn btn-secondary" >MAKSA</button>
+    <button class="btn btn-secondary" (click)="makse()" >MAKSA</button>
     <button class="btn btn-danger" (click)="emptyCart()" >TYHJENDA</button>
 
 
 </div>
 
+<lib-toastify-toast-container
+[autoClose]="1500"
+[position]="'bottom-right'"
+></lib-toastify-toast-container>
+
+
+    
 
 
 <!-- <div class="cart-item" *ngFor="let rentProduct of rentProducts">

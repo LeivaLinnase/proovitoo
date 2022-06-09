@@ -13,6 +13,8 @@ import { TellingudComponent } from './rent/tooriistad/tellingud/tellingud.compon
 import { TrellikomplektidComponent } from './rent/tooriistad/trellikomplektid/trellikomplektid.component';
 import { CartComponent } from './cart/cart.component';
 import { AsukohadComponent } from './asukohad/asukohad.component';
+import { HomeComponent } from './home/home.component';
+import { MeistComponent } from './meist/meist.component';
 
 
 
@@ -31,7 +33,9 @@ const routes: Routes = [
   { path: "tellingud", component: TellingudComponent },
   { path: "trellikomplektid", component: TrellikomplektidComponent },
   { path: "rendikorv", component: CartComponent },
-  { path: "asukohad", component: AsukohadComponent }
+  { path: "asukohad", component: AsukohadComponent },
+  { path: "meist", component: MeistComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({

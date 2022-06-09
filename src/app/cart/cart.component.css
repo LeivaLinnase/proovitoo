@@ -5,13 +5,15 @@ thead {
 }
 
 img {
-    height: 60%;
-    width: 60%;
+    height: 150px;
+    width: 150px;
 }
+
 
 .tabel {
     justify-content: center;
     margin: 3%;
+  
 }
 .punane {
     color: #8b0000;
@@ -24,6 +26,7 @@ img {
 }
 .to-pay {
     text-align: center;
+    justify-content: center;
 }
 .kokku {
     font-weight: bolder;
@@ -31,12 +34,23 @@ img {
 .nupp {
     width: 12px;
     height: 12px;
+}   
+
+.nupp:hover {
+    cursor: pointer;
 }
+
 .dustbin {
     height: 14px;
     width: 12px;
-    
+    }
+
+.dustbin:hover {
+    cursor: pointer
 }
+
 .kui {
     text-align: center;
 }
+
+

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product.model';
 import { CartProduct } from 'src/app/models/cart.product';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-naelapussid',
@@ -16,7 +17,8 @@ export class NaelapussidComponent implements OnInit {
   dbUrl = "https://t88riistarent-default-rtdb.europe-west1.firebasedatabase.app/naelapüssid.json";
 
   constructor(private http: HttpClient,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private _toastService: ToastService) { }
 
   ngOnInit(): void {
 
@@ -63,5 +65,10 @@ export class NaelapussidComponent implements OnInit {
      //....
    
   }
+
+  addInfoToast() {
+    this._toastService.info('Lisatud rendikorvi');
+  }
+
 
 }

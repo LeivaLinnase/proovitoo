@@ -6,7 +6,8 @@
       <div class="col"><i class="punane">Rendi esimene 24h: </i> <b>{{(naelapuss.price * 0.1).toFixed(2)}}€</b><br>
         <br>
         <i class="punane">Iga järgnev 24h: </i> <b>{{(naelapuss.price * 0.02).toFixed(2)}}€</b></div>
-        <button class="btn btn-secondary" (click)="onAddToCart(naelapuss)">Broneerimiseks vajuta siia</button>
+        <button class="btn btn-secondary" (click)="onAddToCart(naelapuss)"
+                                          (click)="addInfoToast()">Broneerimiseks vajuta siia</button>
         
       <div class="w-50"></div>
     
@@ -14,4 +15,9 @@
       
     </div>
   </div>
+
+  <lib-toastify-toast-container
+    [autoClose]="1500"
+    [position]="'bottom-right'"
+></lib-toastify-toast-container>
   

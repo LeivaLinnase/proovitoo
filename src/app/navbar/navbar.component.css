@@ -1,3 +1,55 @@
 nav {
-    margin-bottom: 100px;
+    margin-bottom: 7px;
+    z-index: 1;
+    
+}
+
+
+
+.navbar-brand:hover {
+    cursor: pointer;
+    
+}
+.logo {
+    height: 60%;
+    width: 300px;
+}
+
+.sumOfCart {
+    text-align: center;
+}
+
+.cartIcon {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+.cartIconImg {
+
+    height: 50px;
+    width: 50px;
+}
+.cartNumber {
+   
+   position: absolute;
+   top: 3px;
+   right: 10px;
+   color: white;
+   background-color: red;
+   border-radius: 50%;
+   height: 22px;
+   width: 22px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+
 }

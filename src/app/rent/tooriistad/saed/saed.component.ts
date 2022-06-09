@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { CartProduct } from 'src/app/models/cart.product';
 import { ProductService } from 'src/app/services/product.service';
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 
 @Component({
   selector: 'app-saed',
@@ -23,7 +24,8 @@ export class SaedComponent implements OnInit {
   
   constructor(private http: HttpClient, 
               private route: ActivatedRoute,
-              private productService: ProductService,) { }
+              private productService: ProductService,
+              private _toastService: ToastService) { }
 
   ngOnInit(): void {
 
@@ -86,6 +88,10 @@ export class SaedComponent implements OnInit {
      //error - punane
      //....
    
+  }
+
+  addInfoToast() {
+    this._toastService.info('Lisatud rendikorvi');
   }
 
 }

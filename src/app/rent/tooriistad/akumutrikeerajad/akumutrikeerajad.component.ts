@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product.model';
 import { CartProduct } from 'src/app/models/cart.product';
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 
 @Component({
   selector: 'app-akumutrikeerajad',
@@ -16,7 +17,8 @@ export class AkumutrikeerajadComponent implements OnInit {
   dbUrl = "https://t88riistarent-default-rtdb.europe-west1.firebasedatabase.app/akumutrikeerajad.json";
 
   constructor(private http: HttpClient,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private _toastService: ToastService) { }
 
   ngOnInit(): void {
 
@@ -55,12 +57,17 @@ export class AkumutrikeerajadComponent implements OnInit {
      sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
      this.productService.cartChanged.next(true);
      
+     
     //  this._toastService.info(productClicked.name + ' lisati ostukorvi');
      // info - sinine
      // sucess - roheline
      //error - punane
      //....
    
+  }
+
+  addInfoToast() {
+    this._toastService.info('Lisatud rendikorvi');
   }
 
 }

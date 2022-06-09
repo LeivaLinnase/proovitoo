@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { CartProduct } from 'src/app/models/cart.product';
 import { ProductService } from 'src/app/services/product.service';
+import { ToastService } from 'angular-toastify';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class TellingudComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private productService: ProductService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private _toastService: ToastService) { }
 
   ngOnInit(): void {
 
@@ -85,6 +87,10 @@ export class TellingudComponent implements OnInit {
      //error - punane
      //....
    
+  }
+
+  addInfoToast() {
+    this._toastService.info('Lisatud rendikorvi');
   }
 
 }

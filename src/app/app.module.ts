@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-
+import { Observable, Subject } from 'rxjs';
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -20,6 +21,11 @@ import { TellingudComponent } from './rent/tooriistad/tellingud/tellingud.compon
 import { AkumutrikeerajadComponent } from './rent/tooriistad/akumutrikeerajad/akumutrikeerajad.component';
 import { CartComponent } from './cart/cart.component';
 import { AsukohadComponent } from './asukohad/asukohad.component';
+import { HomeComponent } from './home/home.component';
+import { MeistComponent } from './meist/meist.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
+
 
 
 
@@ -39,7 +45,13 @@ import { AsukohadComponent } from './asukohad/asukohad.component';
     TellingudComponent,
     AkumutrikeerajadComponent,
     CartComponent,
-    AsukohadComponent
+    AsukohadComponent,
+    HomeComponent,
+    MeistComponent,
+    
+    
+
+    
   ],
   imports: [
     FormsModule,
@@ -47,12 +59,16 @@ import { AsukohadComponent } from './asukohad/asukohad.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularToastifyModule,
+    YouTubePlayerModule
+    
+  
     
     
     
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

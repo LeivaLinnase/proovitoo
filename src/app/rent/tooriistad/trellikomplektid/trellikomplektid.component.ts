@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product.model';
 import { CartProduct } from 'src/app/models/cart.product';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-trellikomplektid',
@@ -16,7 +17,8 @@ export class TrellikomplektidComponent implements OnInit {
   dbUrl = "https://t88riistarent-default-rtdb.europe-west1.firebasedatabase.app/trellikomplektid.json";
 
   constructor(private http: HttpClient,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private _toastService: ToastService) { }
 
   ngOnInit(): void {
 
@@ -67,6 +69,9 @@ export class TrellikomplektidComponent implements OnInit {
      //error - punane
      //....
    
+  }
+  addInfoToast() {
+    this._toastService.info('Lisatud rendikorvi');
   }
 
 }

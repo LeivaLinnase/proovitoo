@@ -48,13 +48,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "500mb",
+                  "maximumError": "600mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "500mb",
+                  "maximumError": "600mb"
                 }
               ],
               "fileReplacements": [
@@ -117,5 +117,7 @@
       }
     }
   },
-  "defaultProject": "T88riistaRent"
+  "cli": {
+    "analytics": false
+  }
 }
